@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The World's Oldest Game!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Firebase script -->
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- Personal scripts -->
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <script src="assets/javascript/rps.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="text-center">Rock! Paper! Scissors!
+      <br /> The Classic Showdown!</h1>
+    <h2 class="alert alert-info text-center">Two players are currently in an outrageous confrontation! Please be patient until the dust settles.</h2>
+  </header>
+
+  <div class="row handle-row">
+    <div class="col-xs-12 col-md-12 d-flex justify-content-center">
+      <form class="player-form">
+        <div class="player-input">
+          <label for="handle" class="user">Your handle</label>
+          <input id="handle" placeholder="handle here" class="for-form">
+        </div>
+        <span class="player-input-btn">
+          <button class="btn btn-primary" type="submit" id="submit-handle">Prepare for Battle!</button>
+        </span>
+      </form>
+      <p class="after-submit"></p>
+    </div>
+  </div>
+  <!-- Main content that's unique to this page -->
+  <!-- Starting with box 1, going from left to right -->
+  <main>
+    <div class="row game-row">
+      <div class=" col-xs-12 col-md-4 box box-1">
+        <p class="handle handle-1"></p>
+        <div class="input-state">
+          <p class="waiting waiting-1">Your Opponent is choosing the perfect weapon...</p>
+          <div class="weapons weapons-1">
+            <p class="weapon" data-choice="r" data-text="rock" role="button">Rock</p>
+            <p class="weapon" data-choice="p" data-text="paper" role="button">Paper</p>
+            <p class="weapon" data-choice="s" data-text="scissors" role="button">Scissors</p>
+          </div>
+          <p class="chosen-weapon chosen-weapon-1"></p>
+        </div>
+        <p class="score score-1"></p>
+      </div>
+
+      <!--Middle box, showing the outcomes -->
+      <div class="col-xs-12 col-md-4 box box-result">
+        <p class="turn"></p>
+        <p class="winner"></p>
+      </div>
+
+      <!-- Right box, same contents as left box-->
+      <div class=" col-xs-12 col-md-4 box box-1">
+        <p class="handle handle-2"></p>
+        <div class="input-state">
+          <p class="waiting waiting-2">Your Opponent is choosing the perfect weapon...</p>
+          <div class="weapons weapons-2">
+            <p class="weapon" data-choice="r" data-text="rock" role="button">Rock</p>
+            <p class="weapon" data-choice="p" data-text="paper" role="button">Paper</p>
+            <p class="weapon" data-choice="s" data-text="scissors" role="button">Scissors</p>
+          </div>
+          <p class="chosen-weapon chosen-weapon-2"></p>
+        </div>
+        <p class="score score-2"></p>
+      </div>
+    </div>
+
+    <div class="row chat-row">
+      <div class="col-xs-12 col-md-4 col-md-offset-4">
+        <div class="box box-chat">
+          <div class="messages"></div>
+        </div>
+        <form class="chat-form">
+          <div class="player-input">
+            <label for="message" class="user">Talk to your fellow Gladiator:</label>
+            <input id="message" placeholder="Type here" class="for-form">
+          </div>
+          <span class="player-input-btn">
+            <button class="btn btm-primary" type="submit" id="submit-chat">Send</button>
+          </span>
+        </form>
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>
