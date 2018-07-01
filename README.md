@@ -1,2 +1,2 @@
 # RPS-Multiplayer
-Week 7 Homework
+This homework conflicted too much with the project to be due next week, and as such I chose the project over the homework. I'll update this assignment throughout the beginnings of the week. Assigning what could very well be the most difficult assignment we've had so far, the week before we've had our first collaborative project, seems like a poor teaching decision from my point-of-view as a student.
